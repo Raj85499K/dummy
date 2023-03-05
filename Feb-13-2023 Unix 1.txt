@@ -1,0 +1,180 @@
+command
+command -options
+command input
+command -options input1 input2
+
+pwd 
+
+--Present Working Directory
+--used to identify path of current folder
+
+ls--list
+used to list files and dir
+
+ls -ltr
+l--long(Properties of files)
+t--time(in default order is desc)
+r--reversepwd
+h--human readable format
+S--sort mem size(in default order is desc)
+a--all, including hidden files(. and ..)
+A--all, including hidden files(without . and ..)
+F--file format *-->all permission   @-->link  /--->dir
+
+File Types
+-  Normal Files or ordinary files
+d  Dierctory file
+l  Link file
+
+c  Char spl file
+b  Block spl file
+s  sortcut spl file 
+
+ls -l
+
+column1	file or dir permission
+col2	Dir linked 
+col3	user
+col4	group
+col5	memory size
+col6	created or modified time
+col7	file or dir
+
+note:
+if i create empty file mem of the file is zero
+if i create empty dir mem of the dir is 4kS
+
+ls -ltr
+ls -lSrh
+
+How to find hidden files or dot files?
+ls -a
+
+How to list files and dir with with respect to time reverse?
+ls -ltr
+
+How to list files based on memory size?
+ls -lSrh
+
+
+Dir mauplaion
+mkdir---make dir
+cd--change dir
+
+mkdir d1
+rmdir d1
+
+How to create multiple dir?
+mkdir d1 d2 d3 d4
+
+How to remove multiple dir?
+---If i remove dir, it should be empty
+rmdir d1 d2 d3 d4
+
+(.)---current dir
+(..)--previous dir
+(../..)--2 step back
+cd	user home dir
+cd ~- previous woked dir
+How to create nested dir?
+d1/d2/d3/d4
+mkdir -p d1/d2/d3/d4/d5
+
+
+
+How to remove nested dir?
+or 
+How to remove non-empty dir?
+d1/d2/d3/d4
+rm -r d1
+
+note
+if i want to remove empty dir i can use rmdir, but is not an empty dir i have to use rm -r
+
+-r -- reg
+
+Absolute path
+-------------
+--we have to mention full path, starts with root
+cd /home/user/d1/d2/d3
+
+Relative path
+------------------
+--as per relative dir
+cd dd1/dd2/dd3
+
+File 
+-----
+
+how to crate empty file?
+touch file_name
+
+how to crate multiple empty file?
+touch file1 file2 file3
+
+how to remove file?
+rm file_name
+
+how to remove multiple files?
+rm file1 file2 file3
+
+How to create file with selected timestamp?
+touch -t 202103011200 f1
+format: yyyymmdd
+
+How to view a file content?
+cat file_name
+cat < file_name
+cat 0< file_name
+
+note:
+if we want to crate new empty file i have to use touch
+if file is already exist, created or modified time of file will be change
+
+cat --Concat
+cat file_name -we can view file
+cat > file_name --create new file with line text or if file already exists info will replace
+cat >> file_name --create new file with line text or if file already exists info will append
+
+
+
+how to create non empty file?
+cat > file_name
+add info
+ctl+d---save
+
+or
+P
+cat >> file_name
+add info
+ctl+d---save
+
+Output redirection
+cat >>----append
+cat >---replace
+
+How to print file contect in reverse string?
+rev file_name
+How to print reverse file lines?
+tac file_name
+
+all files and dir in LScurrent dir but.
+rm -r *
+How to remove only empty dir?
+rmdir *
+How to remove non empty dir?
+rm -r *
+--but this command will remove files and empty dir also
+How to remove only files in current dir?
+rm *
+How to remove txt files?
+rm *.txt
+How to remove files starting wil char s?
+rm s*
+How to remove file which having extention?
+rm *.*
+
+*--> one or many char
+Note:
+We cannot able to remove only non empty dir if i try ro use rm -r * this command will remove all the files and dir inclusing non empty and empty dir
+
